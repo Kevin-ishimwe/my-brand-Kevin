@@ -13,11 +13,12 @@ html{
 }
 
 
+
 .landing_page{
     height: 100vh;
     
     background-color: #b69e21;
-    width: 100%;
+    width: 100vw;
    
     position: fixed;
     top: 0%;
@@ -337,7 +338,7 @@ font-size: large;
 .skills{
     min-height: 80vh;
     width: 100%;
-    padding: 2% 2% 4%;
+    padding: 2% 0% 4% 0%;
     background-color: #f0f0f0;
 
 
