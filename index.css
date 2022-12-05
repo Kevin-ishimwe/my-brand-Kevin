@@ -256,12 +256,12 @@ parrallax scrolling */
     display: flex;
     justify-content: right;
     
-    min-height: 110vh;
+    min-height: 100vh;
     background-color: white;
 }
 .about_img{
     scale: 1.3;
-    top: 20vh;
+    top: 30vh;
     position: absolute;
     left: 0%;
  
