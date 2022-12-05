@@ -338,6 +338,7 @@ font-size: large;
 .skills{
     min-height: 80vh;
     width: 100%;
+    padding-bottom: 5%;
     
     background-color: #f0f0f0;
 
@@ -414,13 +415,14 @@ color: #9F8600;
     
 }
 .cod_lang{
-   display: grid;
-   grid-template-columns: 10em 10em 10em;
+   display: flex;
+   flex-wrap: wrap;
 }
 .cod_skills{
     font-size: x-large;
     color: azure;
-    padding: 5%;
+    padding: 2%;
+    width: 5em;
     background-color: #deda00;
     margin: 1% 2%;
 }
