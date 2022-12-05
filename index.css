@@ -349,10 +349,11 @@ font-size: large;
 }
 .skills_hd{
     
-    font-size: 45px;
+    font-size: 3.3em;
     font-family: sans-serif;
     font-weight: 600;
-    margin: 0% 0% 2%;
+    padding: 4% 0%;
+    margin: 0% 0% 4%;
     text-align: center;
 color: #9F8600;
 
@@ -365,20 +366,23 @@ color: #9F8600;
     justify-content: space-evenly;
 }
 .skills_left{
+    background-position: center;
     width: 40vw;
     background: url('assets/Untitledbubles.jpg');
-    height: 50vh;
+    min-height: 60vh;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 3em;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.561);
-    padding: 1%;
+    padding: 0% 0% 5%;
+    box-sizing: border-box;
     margin-bottom: 3%;
+    scale: 0.95;
 }
 .ui_ux{
     font-size: 4em;
     font-weight: 500;
-    margin: 25% 0% 2%;
+    padding: 20% 0% 0%;
     text-align: center;
 }
 .ui_cont{
@@ -402,11 +406,12 @@ color: #9F8600;
 }
 .skills_right{
     border-radius: 2em;
-    
+    scale: 0.9;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.561);
     padding: 1%;
     width: 40vw;
-    height: 50vh;
+    height: fit-content;
+    min-height: 55vh;
     background-color: rgb(255, 255, 255);
 }
 .cod_skills_hd{
@@ -434,13 +439,77 @@ color: #9F8600;
 
 
 /* my projects page */
-.myprojects{
+#myprojects{
    
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 
     background-color: white;
 }
+.project_hd{
+    text-align: center;
+    padding: 3% 0% 0%;
+    font-size: 3.2em;
+    color: #8f7b17;
+}
+.proj_all{
+
+    margin: 4% 0% 0%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.proj_cont{
+    margin: 1%;
+    border-radius: 5%;
+    width: 30vw;
+    min-width: 20em;
+    padding-bottom: 3%;
+    background-color: #DFD499;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.594);
+    transition: .7s ease-in-out;
+    scale: 0.9;
+}
+.proj_cont:hover,.proj_visit:hover{
+    scale: 1;
+}
+.proj_name{
+ 
+    background-color: #AE9200;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 3%;
+    text-align: center;
+    color: white;
+}
+.proj_img{
+    width: 28vw;
+    height: 30vh;
+    min-width: 20em;
+}
+.proj_des{
+    color: #2F2F2F;
+    font-size: larger;
+    font-weight: 500;
+    padding: 6%;
+}
+.proj_visit{
+    padding: 2% 4%;
+    font-size: x-large;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin: 1% 4%;
+    background-color: #AB9000;
+    transition: .5s ease;
+}
+
+
+
+
+
+/* blog */
 .blogs{
    
     width: 100%;
@@ -561,14 +630,33 @@ color: #9F8600;
     }
     .skills_right{
         border-radius: 2em;
-        
+        height: fit-content;
        
-        width: 70vw;
-        height: 50vh;
+        width: 80vw;
+       padding-bottom: 5%;
     }
     .skills_left{
-        width: 70vw;
+        padding-bottom: 25%;
+        width: 80vw;
+        background-position: center;
+        padding-bottom: 5%;
     }
+    .ui_ux{
+        font-size: 4em;
+        font-weight: 500;
+        margin: 2% 0% 4%;
+        text-align: center;
+    }
+    .proj_cont{
+        margin: 4% 0%;
+        width: 75vw;
+        padding-bottom: 10%;
+    }
+    .proj_img{
+        width: 75vw;
+        height: 40vh;
+    }
+
   
 
 }
@@ -587,7 +675,7 @@ color: #9F8600;
        position: fixed;
        background-color: #000223;
        width: 100vw;
-       transition: 1s;
+       transition: .7s;
        transform: translateX(-100%);
        top: -1%;
        height: 40vh;
@@ -647,15 +735,15 @@ color: #9F8600;
         font-size: 5vw;
 
     }
-    .skills_right{
-        border-radius: 2em;
-        
-       
+   
+    .skills_left,.skills_right{
         width: 90vw;
-        height: 50vh;
+        min-height: 40vh;
     }
-    .skills_left{
-        width: 90vw;
+    .ui_skill1,.ui_skill2{
+        padding: 1%;
+ 
+        font-size: x-large;
     }
  
     
