@@ -362,9 +362,9 @@ color: #9F8600;
     justify-content: space-evenly;
 }
 .skills_left{
-    min-width: 30em;
+    min-width: 35vw;
     background: url('assets/Untitledbubles.jpg');
-    height: 45vh;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 3em;
@@ -402,27 +402,29 @@ color: #9F8600;
     
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.561);
     padding: 1%;
-    width: 30em;
-    height: 45vh;
+    min-width: 40vw;
+    height: 50vh;
     background-color: rgb(255, 255, 255);
 }
 .cod_skills_hd{
     text-align: center;
     font-size: 2.3em;
     font-weight: 500;
-    margin: 4% auto 2%;
+    margin:8% auto 2%;
     
     
 }
 .cod_lang{
-   display: flex;
-   flex-wrap: wrap;
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+   justify-content: space-evenly;
+  
 }
 .cod_skills{
     font-size: x-large;
     color: azure;
     padding: 2%;
-    width: 5em;
+    min-width: 9vw;
     background-color: #deda00;
     margin: 1% 2%;
 }
