@@ -362,7 +362,7 @@ color: #9F8600;
     justify-content: space-evenly;
 }
 .skills_left{
-    min-width: 35vw;
+    width: 40vw;
     background: url('assets/Untitledbubles.jpg');
     height: 50vh;
     background-repeat: no-repeat;
@@ -402,7 +402,7 @@ color: #9F8600;
     
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.561);
     padding: 1%;
-    min-width: 40vw;
+    width: 50vw;
     height: 50vh;
     background-color: rgb(255, 255, 255);
 }
@@ -415,16 +415,14 @@ color: #9F8600;
     
 }
 .cod_lang{
-   display: grid;
-   grid-template-columns: 30% 30% 30%;
-   justify-content: space-evenly;
+   display: flex;
+   flex-wrap: wrap;
   
 }
 .cod_skills{
     font-size: x-large;
     color: azure;
     padding: 2%;
-    min-width: 9vw;
     background-color: #deda00;
     margin: 1% 2%;
 }
@@ -555,7 +553,16 @@ color: #9F8600;
         transform: translateX(-3vw);
         
     }
-
+    .skills_right{
+        border-radius: 2em;
+        
+       
+        width: 70vw;
+        height: 50vh;
+    }
+    .skills_left{
+        width: 70vw;
+    }
   
 
 }
@@ -612,6 +619,16 @@ color: #9F8600;
     .contact_us{
         font-size: 5vw;
 
+    }
+    .skills_right{
+        border-radius: 2em;
+        
+       
+        width: 90vw;
+        height: 50vh;
+    }
+    .skills_left{
+        width: 90vw;
     }
  
     
