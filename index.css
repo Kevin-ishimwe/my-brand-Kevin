@@ -559,8 +559,9 @@ min-width: 18em;
 /* contact page */
 #contact_page{
    padding-top: 10%;
+   padding-bottom: 10%;
     width: 100%;
-    min-height: 70vh;
+    min-height: 60vh;
     background-color: white;
 
 }
