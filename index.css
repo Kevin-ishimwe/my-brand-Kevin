@@ -558,15 +558,70 @@ min-width: 18em;
 }
 /* contact page */
 #contact_page{
-   
+   padding-top: 10%;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: white;
 
 }
+.contact_cont{
+    display: flex;
+    padding: 3% 1.5% 5%;
+    flex-direction: column;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.512);
+    width: 35em;
+    border-radius: 3vh;
+    margin: 0% auto;
+}
+.contact_hd{
+    color: #000223;
+    font-size: 3em;
+    font-family: Cambria;
+    text-align: center;
+    margin-bottom: 2%;
+    font-weight: 500;
+}
+.contact_name,.contact_email,.contact_content{
+    background-color: #f0f0f0;
+    padding: 2% 2%;
+    font-size: x-large;
+    color: #00034a;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.481);
+    border-radius: 2vh;
+    
+    margin: 1% 1% 2%;
+}
+.contact_content{
+    font-size: large;
+}
+.contact_btn{
+    font-size: x-large;
+    background-color: #000D53;
+    border: none;
+    padding: 2%;
+    margin: 3% 0%;
+    color: azure;
+    border-radius: 10vh;
+}
+.contact_other{
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info{
+    font-size: large;
+    color: #2F2F2F;
+   
+}
+/* footer */
 .footer{
     width: 100%;
-    height: 40vh;
+    height: 80vh;
     background-color: #00034a;
 }
 
@@ -694,11 +749,12 @@ min-width: 18em;
     }    
     .proj_cont{
         margin: 2% 0%;
-        width: 90vw;
+        width: 85vw;
         padding-bottom: 10%;
+        scale: 1;
     }
     .proj_img{
-        width: 90vw;
+        width: 85vw;
         height: 30vh;
     }
     .blog_all{
@@ -707,7 +763,9 @@ min-width: 18em;
     .blog_cont{
         padding-bottom: 8%;
     }
-
+    .contact_cont{
+        width: 80vw;
+    }
 }
 
 /* MOBILE view */
@@ -799,11 +857,24 @@ min-width: 18em;
     }
     .blog_cont{
         padding-bottom: 8%;
-         width: 80vw;
+         width: 85vw;
     }
 .blog_img{
     
-    height: 50vh;
+    height: 35vh;
+}
+.contact_name,.contact_email,.contact_content{
+    font-size: large;
+    margin: 2% 2%;
+    border-radius: 1vh;
+}
+
+.contact_cont{
+    width: 90vw;
+}
+.info{
+    font-size: medium;
+    margin-bottom: 10%;
 }
 
     
