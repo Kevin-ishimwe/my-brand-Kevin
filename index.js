@@ -43,8 +43,13 @@ menu_btn.onclick=()=>{
 //disappearing navigation menu
 links.forEach((item)=>{
     item.onclick=()=>{
-        document.querySelector(".nav_ul").style.transform=" translateY(-100%)"
-        menu_btn.classList="fas fa-bars"
+        if(visualViewport.width<501){
+            document.querySelector(".nav_ul").style.transform=" translateY(-100%)"
+            menu_btn.classList="fas fa-bars"
+        }
+        else{
+            
+        }
        
     }
 })

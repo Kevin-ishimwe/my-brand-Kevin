@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Romanesco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arya&family=Romanesco&family=Style+Script&display=swap');
 html{
     scroll-behavior:smooth;
     scrollbar-width: 1px;
@@ -609,9 +609,15 @@ min-width: 18em;
     justify-content: space-evenly;
 }
 .contact_info{
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+#contact_icon{
+    font-size: xx-large;
+   
+    text-align: center;
 }
 .info{
     font-size: large;
@@ -621,8 +627,72 @@ min-width: 18em;
 /* footer */
 .footer{
     width: 100%;
-    height: 80vh;
+    
+    min-height: 40vh;
     background-color: #00034a;
+}
+.logo_footer{
+    
+    font-size: 40px;
+    font-family:  'Romanesco',sans-serif;
+    font-weight: 500;
+    width: 20px;
+    color: azure;
+    margin: 0%;
+    padding: 8px 20px;
+    border-radius: 50%; 
+    border: solid azure;
+
+}
+.footer_content{
+    width: 90vw;
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_left{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0% 1%;
+    min-width: 30vw;
+    width: fit-content;
+    justify-content: left;
+    height: 25vh;
+
+}
+
+.nav_footer{
+    
+    width: fit-content;
+    font-size: x-large;
+    color: azure;
+    text-decoration: none;
+    margin: 0% 4%;
+    font-family: 'Arya';
+    
+}
+.thanks{
+    font-family: 'Style Script';
+    font-size: 3em;
+    color: white;
+}
+.subscribe{
+    color: azure;
+    font-size: 2em;
+}
+.sub_email{
+    width: 10em;
+    padding: 1%;
+    font-size: larger;
+}
+.sub_btn{
+    background-color: #8f7b17;
+    color: black;
+    padding: 1%;
+    font-size: x-large;
+    border: none;
+
 }
 
 
@@ -766,6 +836,26 @@ min-width: 18em;
     .contact_cont{
         width: 80vw;
     }
+    .footer_content{
+        width: 100%;
+    }
+    .thanks{
+        text-align: right;
+        font-size: 2em;
+    }
+    .subscribe{
+        text-align: right;
+        font-size: x-large;
+    }
+    .sub_email{
+        width: 20vw;
+    }
+    .footer_right{
+        display: block;
+        text-align: right;
+        justify-content: right;
+    }
+
 }
 
 /* MOBILE view */
@@ -857,11 +947,12 @@ min-width: 18em;
     }
     .blog_cont{
         padding-bottom: 8%;
-         width: 85vw;
+         width: 45vw;
+         min-width: 45vw;
     }
 .blog_img{
     
-    height: 35vh;
+    height: 30vh;
 }
 .contact_name,.contact_email,.contact_content{
     font-size: large;
@@ -875,6 +966,28 @@ min-width: 18em;
 .info{
     font-size: medium;
     margin-bottom: 10%;
+}
+.footer_content{
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+.footer_right{
+    text-align: center;
+}
+.thanks,.subscribe{
+    text-align: center;
+}
+
+.sub_email{
+    width: 40vw;
+}
+.sub_btn{
+    width: 40vw;
+}
+.footer_left{
+    justify-content: center;
+    width: 98%;
+    box-sizing: border-box;
 }
 
     
