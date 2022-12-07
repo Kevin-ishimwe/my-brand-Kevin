@@ -968,6 +968,9 @@ min-width: 18em;
     font-size: medium;
     margin-bottom: 10%;
 }
+.footer{
+    min-height: 60vh;
+}
 .footer_content{
     flex-direction: column-reverse;
     justify-content: center;
