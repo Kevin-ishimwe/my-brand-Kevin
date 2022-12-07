@@ -60,9 +60,7 @@ html{
     animation: binksake 2s infinite;
     transition: .3s ease-in-out;
 }
-.logo:hover{
 
-}
 @keyframes binksake {
    0% {background-color: #000D53}
     50%{background-color: #8f7b17;}
