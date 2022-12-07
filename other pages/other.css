@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Arya&family=Romanesco&family=Style+Script&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: sans-serif;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    height: 10vh;
+    margin: 0% auto;
+}
+
+.logo{
+    display: inline-flex;
+    font-size: 50px;
+    font-family:  'Romanesco',sans-serif;
+    font-weight: 500;
+    color: azure;
+    padding: 8px 20px;
+    border-radius: 50%; 
+    border: solid azure;
+    background-color: #000d53;
+    transition: .3s ease-in-out;
+} 
+.nav_ul{
+  
+    width: 70vw;
+    display: flex;
+    justify-content: right;
+
+}
+.nav_li{
+    margin: 2% 2%;
+    width: max-content;
+    display: inline-flex;
+    background-color: white
+}  
+.nav_a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #000d53;
+
+}
+#bars{
+    display: none;
+}
+.login_cont{
+    display: flex;
+    flex-direction: column;
+    padding: 2% 4%;
+    box-sizing: border-box;
+    width: 30em;
+    border-radius: 20px;
+    margin: 2% auto;
+    height: 75vh;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.505);
+}
+#user{
+    margin: 5% 0% 10%;
+    color: #AE9200;
+    font-size: 5em;
+    display: block;
+    text-align: center;
+    
+
+}
+.input_box{
+    display: flex;
+    justify-content: left;
+
+}
+#input_icon{
+    font-size: x-large;
+    margin: 4% 0%;
+    color: #5C5C5C;
+    transform: translateX(0.5vw);
+}
+.login_input{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #EDEDED;
+    padding: 1% 2em ;
+    font-size: x-large;
+    border: none;
+    color: #1a2667;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.512);
+    margin: 2% -4vh;
+}
+.forgot{
+    color: #000c53d9;
+    text-decoration: none;
+    font-size: large;
+    margin: 2% 2%;
+
+}
+.log_btn{
+    background-color: #AE9200;
+    border: none;
+    font-size: xx-large;
+    width: 100%;
+    margin: 2% auto 4%;
+    color: white;
+    padding: 1%;
+}
+.dont{
+    color: #001797cd;
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+}
+.socials{
+    margin: 4% 0%;
+    text-align: center;
+}
+#soc_icon{
+    font-size: 2em;
+    margin: 0% 2% ;
+    color: #AE9200;
+}
+@media screen and (max-width:600px){
+    .login_cont{
+        margin: 5%;
+        width: 90vw;
+   
+ 
+    }
+    #input_icon{
+        font-size: larger;
+        margin: 5% 0%;
+
+    }
+    .login_input{
+        padding: 1% 10vw;
+    }
+    .nav_ul{
+        display: none;
+    }
+    #bars{
+        display: inline-flex;
+        font-size: 3em;
+        margin: 3% 2%;
+        color: #000d53;
+    }
+    
+}

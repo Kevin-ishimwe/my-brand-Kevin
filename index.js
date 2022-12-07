@@ -2,7 +2,7 @@
 var links=document.querySelectorAll('.nav_a')
 window.addEventListener('scroll',()=>{
   
-    if(scrollY>600){
+    if(scrollY>590){
         if(visualViewport.width<500){
             menu_btn.style.color="#000d53"
         }
