@@ -13,11 +13,7 @@ menu_btn.onclick=()=>{
             document.querySelector(".nav_ul").style.transform=" translateY(-100%)"
             menu_btn.classList="fas fa-bars"
         }
-
-    }
-    
-  
-   
+    }   
 }
 //disappearing navigation menu
 links.forEach((item)=>{
@@ -32,3 +28,6 @@ links.forEach((item)=>{
        
     }
 })
+
+
+
