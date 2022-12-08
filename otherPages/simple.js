@@ -1,4 +1,5 @@
 //hamburger menu
+var links=document.querySelectorAll('.nav_a')
 const menu_btn=document.getElementById("bars")
 var menu_tracker=0
 menu_btn.onclick=()=>{

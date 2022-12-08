@@ -151,7 +151,9 @@ html{
 
 }
 .learn_more{
+    text-decoration: none;
     background-color: #ab9000;
+    color: black;
     font-size: 2vw;
     padding: 1% 2%;
     margin: 2% 0%;
