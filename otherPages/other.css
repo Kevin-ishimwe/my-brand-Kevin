@@ -180,6 +180,7 @@
     margin: 1% 0%;
 }
 .comment_box{
+    display: flex;
     padding: 1% 2%;
     border-bottom: 2px solid rgba(128, 128, 128, 0.461);
     margin: 2% 0%;
@@ -189,6 +190,14 @@
     
     min-height: 40vh;
     background-color: #00034a;
+}
+#user{
+    font-size: xx-large;
+    margin: 2%;
+    background-color: gray;
+    color: white;
+    height: fit-content;
+    padding: 1% 1% 1%;
 }
 .logo_footer{
     
