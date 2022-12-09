@@ -191,6 +191,14 @@
     min-height: 40vh;
     background-color: #00034a;
 }
+#user{
+    font-size: xx-large;
+    margin: 2%;
+    background-color: gray;
+    color: white;
+    height: fit-content;
+    padding: 1% 1% 1%;
+}
 .logo_footer{
     
     font-size: 40px;

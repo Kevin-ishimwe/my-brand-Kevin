@@ -38,13 +38,14 @@ html{
 
 .navigation_bar{
     display: flex;
-    width: 85vw;
+    width: 80vw;
+    backdrop-filter: blur(2px);
     justify-content: space-between;
     top: 0%;
     
     z-index: 10;
     position: fixed;
-    left: 7vw;
+    left: 10vw;
 
 }
 .logo{
@@ -84,7 +85,7 @@ html{
     list-style: none;
 }
 .nav_a{
-    font-size: 2em;
+    font-size: 1.7em;
     text-decoration: none;
     color: azure;
     font-family: sans-serif;
@@ -97,7 +98,8 @@ html{
 }
 .mid_landing{
     display: flex;
-    width: 85vw;
+    min-width: 48em;
+    width: 80vw;
     margin: 20vh auto;
     justify-content: space-between;
     
@@ -105,9 +107,9 @@ html{
 }
 
 .hey{
-    font-size: 2.5vw;
-    color: #000223;
-    margin: 2% 0% 2%;
+    font-size: 2em;
+    color: hsl(237, 100%, 7%);
+    margin: 12vh 0% 2%;
     font-family: sans-serif;
     font-weight: 500;
     animation: hey 2s 1 ;
@@ -120,14 +122,14 @@ html{
 }
 .name{
     color: #000223;
-    font-size: 3.5vw;
+    font-size: 2.7em;
     font-family: sans-serif;
-    margin: 2% 0% 2%;
+    margin: 1vh 0% 2%;
     animation: name 6s 1 ;
     
     transition: .4s ease-in-out;
 }
-.name:hover,.hey:hover{
+.name:hover{
    margin: 2% 4% ;
    
 }
@@ -139,7 +141,7 @@ html{
 .full_s{
     color: #000223;
     font-family: sans-serif;
-    font-size: 2.5vw;
+    font-size: 2em;
     animation: hey 6s 1 ;
     transition: .2s ease-in-out;
 }
@@ -154,7 +156,7 @@ html{
     text-decoration: none;
     background-color: #ab9000;
     color: black;
-    font-size: 2vw;
+    font-size: 1.4em;
     padding: 1% 2%;
     margin: 2% 0%;
     border: 4px solid black;
@@ -173,7 +175,8 @@ html{
     text-decoration: none;
     background-color: #00034a;
     color: azure;
-    font-size: 2vw;
+  
+    font-size: 1.5em;
     padding: 1% 3%;
     margin: 2% 4%;
     border: 4px solid #00034a;
@@ -206,7 +209,7 @@ html{
 #me_img{
     display: flex;
     border-radius: 50%;
-    width: 25vw;
+    width: 20em;
     padding: 3vh;
     background-color: azure;
     transition: .6s ease;
@@ -227,15 +230,15 @@ html{
     display: block;
     text-align: right;
     margin: 3vh 0%;
-    right: 7vw;
+    right: 12vw;
     width: 50vw;
     position: absolute;
 
 
 }
 #soc_icon{
-    font-size: 6vh;
-    margin: 0% 4%;
+    font-size: 2.2em;
+    margin: 0% 2%;
     color: azure;
     transition: .31s ease-in-out;
 }
@@ -265,7 +268,7 @@ parrallax scrolling */
 }
 .about_img{
     scale: 1.3;
-    top: 30vh;
+    top: 4%;
     position: absolute;
     left: 0%;
  
@@ -287,19 +290,19 @@ parrallax scrolling */
 }
 .about_right_hd{
 
-    font-size: 45px;
+    font-size: 2em;
     font-family: sans-serif;
     font-weight: 600;
-    margin: 0% 0% 2%;
-color: #9F8600;
+    margin: 4% 0% 3%;
+    color: #9F8600;
 }
 .about_right_txt{
-    font-size: 24px;
+    font-size: 1.5em;
     color: #272727;
     
 }
 .about_education{
-    font-size: 32px;
+    font-size: 1.6em;
     color: #000D53;
     margin: 5% 0% 2%;
 
@@ -339,7 +342,7 @@ font-size: large;
 
 
 .skills{
-    min-height: 80vh;
+    min-height: 60vh;
     width: 100%;
     padding-bottom: 5%;
     
@@ -349,11 +352,11 @@ font-size: large;
 }
 .skills_hd{
     
-    font-size: 3.3em;
+    font-size: 2.5em;
     font-family: sans-serif;
     font-weight: 600;
     padding: 4% 0%;
-    margin: 0% 0% 4%;
+    margin: 0% 0% 2%;
     text-align: center;
 color: #9F8600;
 
@@ -361,15 +364,15 @@ color: #9F8600;
 }
 .skills_content{
     display:flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap:wrap;
     justify-content: space-evenly;
 }
 .skills_left{
     background-position: center;
-    width: 40vw;
+    min-width: 30em;
     background: url('assets/Untitledbubles.jpg');
-    min-height: 60vh;
+    min-height: 55vh;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 3em;
@@ -377,12 +380,12 @@ color: #9F8600;
     padding: 0% 4% 5%;
     box-sizing: border-box;
     margin-bottom: 3%;
-    scale: 0.95;
+    scale: 0.85;
 }
 .ui_ux{
     font-size: 4em;
     font-weight: 500;
-    padding: 30% 0% 0%;
+    padding: 35% 0% 0%;
     text-align: center;
 }
 .ui_cont{
@@ -405,12 +408,14 @@ color: #9F8600;
 }
 .skills_right{
     border-radius: 2em;
-    scale: 0.9;
+    scale: 0.85;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.561);
     padding: 1%;
-    width: 40vw;
     height: fit-content;
+    width: 35em;
+    min-width: 30em;
     min-height: 55vh;
+    box-sizing: border-box;
     background-color: rgb(255, 255, 255);
 }
 .cod_skills_hd{
@@ -448,7 +453,7 @@ color: #9F8600;
 .project_hd{
     text-align: center;
     padding: 3% 0% 0%;
-    font-size: 3.2em;
+    font-size: 2.2em;
     color: #8f7b17;
 }
 .proj_all{
@@ -468,10 +473,10 @@ color: #9F8600;
     background-color: #DFD499;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.594);
     transition: .7s ease-in-out;
-    scale: 0.9;
+    scale: 0.88;
 }
 .proj_cont:hover,.proj_visit:hover{
-    scale: 1;
+    scale: 0.95;
 }
 .proj_name{
  
@@ -483,7 +488,7 @@ color: #9F8600;
     color: white;
 }
 .proj_img{
-    width: 28vw;
+    width: 30vw;
     height: 30vh;
     min-width: 20em;
 }
@@ -520,21 +525,26 @@ color: #9F8600;
 .blog_all{
     margin: 0% auto;
     padding-bottom: 5%;
-    
+    padding-left: 7%;
     box-sizing: border-box;
   
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
 
 }
 .blog_cont{
+    scale: 0.99;
     width: 20vw;
 min-width: 18em;
     margin: 2% 1%;
     padding-bottom: 3%;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.449);
     background-color: #ffffff;
+    transition: .7s ;
+}
+.blog_cont:hover{
+    scale: 1.04;
 }
 
 .blog_img{
@@ -558,6 +568,7 @@ min-width: 18em;
 }
 /* contact page */
 #contact_page{
+ 
    padding-top: 10%;
    padding-bottom: 10%;
     width: 100%;
@@ -566,6 +577,7 @@ min-width: 18em;
 
 }
 .contact_cont{
+    scale: 0.9;
     display: flex;
     padding: 3% 1.5% 5%;
     flex-direction: column;
@@ -730,6 +742,7 @@ min-width: 18em;
         display: flex;
         flex-direction: column-reverse;
         width: 90vw;
+        min-width: 10vw;
         padding: 20vh 0% 0%;
         margin: 0% auto;
         justify-content: center;       
@@ -825,14 +838,14 @@ min-width: 18em;
         font-size: x-large;
     }    
     .proj_cont{
-        margin: 2% 0%;
+        margin: 0% 0%;
         width: 85vw;
-        padding-bottom: 10%;
-        scale: 1;
+        padding-bottom: 8%;
+        scale: 0.85;
     }
     .proj_img{
         width: 85vw;
-        height: 30vh;
+        height: 40vh;
     }
     .blog_all{
         justify-content: center;
@@ -881,7 +894,7 @@ min-width: 18em;
        width: 100vw;
        transition: .7s;
        transform: translateY(-100%);
-       top: -1%;
+       top: -10%;
        height: 40vh;
        left: 0%;
         
@@ -938,24 +951,35 @@ min-width: 18em;
     .contact_us{
         font-size: 5vw;
 
+    }.ui_ux{
+        font-size: x-large;
     }
    
     .skills_left,.skills_right{
         width: 90vw;
+        padding-bottom: 10%;
+        scale: 1;
         min-height: 40vh;
+        min-width: 70vw;
     }
     .ui_skill1,.ui_skill2{
-        padding: 1%;
+        padding: 2%;
  
-        font-size: x-large;
+        font-size: medium;
+    }
+    .cod_skills{
+        font-size: large;
     }
     .blog_all{
         justify-content: center;
+        padding: 2%;
     }
     .blog_cont{
         padding-bottom: 8%;
          width: 45vw;
          min-width: 45vw;
+         flex: 1 0 20%;
+         margin: 0%;
     }
 .blog_img{
     
