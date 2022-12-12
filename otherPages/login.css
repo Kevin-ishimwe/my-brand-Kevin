@@ -98,7 +98,7 @@
     margin: 2% 2%;
 
 }
-.log_btn{
+.log_btn,.signup_btn{
     background-color: #AE9200;
     border: none;
     font-size: xx-large;
@@ -172,3 +172,14 @@
     }
     
 }
+
+/* validation css */
+.login_input:valid{
+    box-shadow: 0px 0px 10px rgb(0, 211, 0);
+}
+.login_input:focus:invalid{
+    box-shadow: 0px 0px 10px red;
+
+}
+
+
