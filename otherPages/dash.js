@@ -1,3 +1,7 @@
+
+
+
+console.log("hello ")
 // .dashboard control view
 const dash_btn=document.getElementById("dash_menu")
 var count=0
@@ -32,8 +36,7 @@ dash_btn.onclick=()=>{
             item.style.display="inline"
     })
     }
-
-
-
  
 }
+
+

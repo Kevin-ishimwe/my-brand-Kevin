@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="dahboard.css">
     <!-- quill stylesheet -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    
-
 </head>
 <body>
     <div class="dash_left">
@@ -46,9 +44,9 @@
             </div>
             <img class="welcome_img" src="../assets/IMG_20210310_140957.jpg" alt="">
         </div>
-        <form action="" class="new_blog">
-            <input type="text" class="new_blog_title" placeholder="blog title" required >
-            <textarea type="text" class="new_blog_desc" rows="3" columns="5" placeholder="blog description" required ></textarea>
+        <form action="" class="new_blog" >
+            <input type="text" class="new_blog_title" name="title" placeholder="blog title" required >
+            <textarea type="text" class="new_blog_desc" rows="3" columns="5" placeholder="blog description" name="desc" required ></textarea>
                 <input type="file" class="new_blog_img"  > 
                 <div id="editor">
                   </div>   
@@ -59,15 +57,25 @@
         </form>
         
     </div>
+
+    <script>
+     
+
+
+
+       </script>
+
+
     <script src="dash.js"></script>
     <!-- quill js -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script>
         var quill = new Quill('#editor', {
           theme: 'snow',
-          placeholder: 'enter blog content here...',
-          
+          placeholder: 'enter blog content here...', 
         });
       </script>
+       <script    src="../bundle.js"></script>
+               
 </body>
 </html>

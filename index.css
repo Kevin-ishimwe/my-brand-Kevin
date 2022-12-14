@@ -1028,10 +1028,11 @@ min-width: 18em;
 }
 /* validation css */
 .contact_name:valid,.contact_email:valid,.contact_content:valid{
-    box-shadow: 0px 0px 10px rgb(0, 211, 0);
+    border: 3px solid rgb(75, 255, 75);
+    outline: none;
 }
 .contact_name:focus:invalid,.contact_email:focus:invalid,.contact_content:focus:invalid{
-
-    box-shadow: 0px 0px 10px red;
+    border: 3px solid rgb(209, 94, 94);
+    outline: none;
 
 }

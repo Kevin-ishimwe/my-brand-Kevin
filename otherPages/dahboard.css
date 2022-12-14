@@ -210,7 +210,7 @@
 
 
 }
-.blog_all{
+.blog_all,.blog_manage{
     margin: 0% auto;
     padding-bottom: 5%;
 
@@ -295,7 +295,7 @@
         margin-left: 5em;
         padding: 2%;
     }
-    .blog_all{
+    .blog_all,.blog_manage{
         width: 100%;
     }
 
