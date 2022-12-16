@@ -4,6 +4,107 @@
     margin: 0%;
     font-family: sans-serif;
 }
+.animation{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.478);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    z-index: 30;
+    top: 0%;
+}
+.box{
+    display: grid;
+    text-align: center;
+    padding-top: 13%;
+    box-sizing: border-box;
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    top: 22vh;
+    left: 30%;
+    z-index: 15;    
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(81, 30, 148, 0.5);
+    background: rgba(0, 0, 0, 0.626);
+    color: azure;
+   
+    
+}
+.box::before{
+    content: '';
+    position:absolute;
+    top: -10px;
+    left: -10px;
+    height: 100%;
+    width: 100%;
+    border: 10px solid transparent;
+    border-top: 10px solid #ff006a;
+    border-right: 10px solid #00ffae;
+    border-radius: 50%;
+    animation: rotani 1s infinite;
+
+}
+.box::after{
+    content: '';
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    height: 90%;
+    width: 90%;
+    border: 10px solid transparent;
+    border-top: 10px solid #ff006a;
+    border-right: 10px solid #00ffae;
+    border-radius: 50%;
+    animation: rotinside 1s infinite;
+
+}
+@keyframes rotani{
+    0%{
+        transform: rotate(0deg);
+        border-top: 10px solid #ff006a;
+    border-right: 10px solid #00ffae;
+      }
+ 
+      100%{
+        border-top: 10px solid #ff0000;
+        border-right: 10px solid #ffffff;
+        transform: rotate(360deg);
+      }
+}
+    
+@keyframes rotinside{
+    0%{
+        transform: rotate(0deg);
+      }
+ 100%{
+        border-bottom: 10px solid #00ff08;
+        border-left: 10px solid #fff700;
+        transform: rotate(360deg);
+      }
+      50%{
+        border-top: 10px solid #ff0000;
+        border-right: 10px solid #000000;
+        transform: rotate(360deg);
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -97,6 +198,9 @@
     font-weight: 600;
 }
 .blog_desc{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     color: #1c458b;
     font-size: x-large;
 }
@@ -131,15 +235,19 @@
 }
 .more_blogs_img{
     width: 8em;
-    height: 10em;
+    height: 8em;
 }
 .blog_more_title{
     font-size: larger;
+    
     overflow: hidden;
 }
 .more_blog_txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 1% 2%;
-    overflow: hidden;
+
 }
 .comment_section{
     width: 45vw;
@@ -318,7 +426,10 @@
 
 .blog_img{
     width: 100%;
-    height: 40vh;
+    height: 35vh;
+}
+.blog_img_single{
+    width: 100%;
 }
     .blog_desc{
         padding: 5%;

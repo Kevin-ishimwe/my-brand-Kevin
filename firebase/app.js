@@ -86,19 +86,106 @@ if(blog_all!=null){
     fetchData.then((data)=>{
         localStorage.setItem("fetched data",JSON.stringify(data))
 
-        blog_all.innerHTML=data.map(({blogImg,title})=>{
-        console.log(title)
+        blog_all.innerHTML=data.map(({blogImg,title,id})=>{
+      
 
         return(`
         <div class="blog_cont">
                 <img src=${blogImg} alt="" class="blog_img">
                 <p class="blog_desc">${title}</p>
-                <a href="#blogs" class="read_blog">READ BLOG</a>
+                <a href="./blog.html?id=${id}" class="read_blog">READ BLOG</a>
                 </div>
         `)
+
        })
     })    
 }
+
+// showing a single blog
+const single_blog=document.querySelector(".blog_left")
+if(single_blog!=null){
+    const blogId=location.search.split("=")[1]
+   
+
+      
+        //_______________ showing a singe blog____________________//
+        fetchData.then((data)=>{
+            data.filter((element,index)=>{
+                if (element.id==blogId){
+                 
+                    single_blog.innerHTML=(`
+                    <h3 class="blog_hd">${data[index].title}</h3>
+                    <p class="author">author:Ishimwe Kevin</p>
+                    <img src="${data[index].blogImg}" class="blog_img_single">
+                    <h2 style="overflow:none;padding: 2% 0%;
+                    font-size: x-large;
+                    font-weight: 500;
+                    color: #00034a;">${data[index].description}</h2>
+                ${data[index].content} `)
+                }
+             
+            })
+            document.querySelector(".animation").style.display="none"
+            //______________side nav blogs________________
+            const more=(data.splice(0,4))
+            document.querySelector(".more_blogs").innerHTML=more.map(({blogImg,title,description,id})=>{
+    
+                return(`
+                <div class="blog_visit">
+                <img src="${blogImg}" class="more_blogs_img" alt="">
+                <div class="more_blog_txt">
+                    <h3 class="blog_more_title" 
+                    style="overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    "
+                    >${title} </h3>
+                <a href="./blog.html?id=${id}" style="overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp:3;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                ">${description}</a>
+                </div>
+                </div>
+                `)
+            })
+        })   
+
+
+
+
+
+    window.addEventListener('hashchange', function() {
+        this.location.reload()
+    
+    });
+    
+
+    
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //blog manage
 const blog_manage=document.querySelector(".blog_manage")
 if(blog_manage!=null){

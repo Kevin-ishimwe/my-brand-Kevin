@@ -525,19 +525,21 @@ color: #9F8600;
 .blog_all{
     margin: 0% auto;
     padding-bottom: 5%;
-    padding-left: 7%;
+    padding:5% 2%;
     box-sizing: border-box;
   
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
 
 }
 .blog_cont{
     scale: 0.99;
     width: 20vw;
-min-width: 18em;
+    max-width: 20vw;
+    min-width: 15em;
     margin: 2% 1%;
+    flex: 1 0 20%;
     padding-bottom: 3%;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.449);
     background-color: #ffffff;
@@ -552,11 +554,15 @@ min-width: 18em;
     height: 40vh;
 }
 .blog_desc{
-    padding: 5%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5% 5% 5%;
     font-size: large;
     font-weight: 600;
     color: #00034a;
 }
+
 .read_blog{
     background-color: #071458;
     color: white;
