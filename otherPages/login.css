@@ -77,7 +77,7 @@
     font-size: x-large;
     margin: 4% 0%;
     color: #5C5C5C;
-    transform: translateX(0.5vw);
+    transform: translateX(1vw);
     z-index: 0;
 }
 .login_input{

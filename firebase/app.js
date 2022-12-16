@@ -45,39 +45,51 @@ const firebaseConfig = {
     if(blogForm!=null){
         blogForm.onsubmit=(e)=>{
             e.preventDefault()
-            //adding an image to cloud storage
+            document.querySelector(".animation").style.display="grid"
+            console.log("uploading now")
+           
+            if(blogForm.checkValidity()==true){
+                 //adding an image to cloud storage
             console.log("upload started")
-        const file=document.querySelector(".new_blog_img").files[0]
-        const name =file.name
-        const meta={
-        contentType:file.type }
-        const storage=getStorage() 
-        const storageRef=sRef(storage,'images/'+name)
+            const file=document.querySelector(".new_blog_img").files[0]
+            const name =file.name
+            const meta={
+            contentType:file.type }
+            const storage=getStorage() 
+            const storageRef=sRef(storage,'images/'+name)
+            
+            uploadBytes(storageRef,file,meta).then((snapshot)=>{
+                getDownloadURL(snapshot.ref).then((url)=>{
+                    imageLink=url
+                    console.log(imageLink)
         
-        uploadBytes(storageRef,file,meta).then((snapshot)=>{
-            getDownloadURL(snapshot.ref).then((url)=>{
-                imageLink=url
-                console.log(imageLink)
-    
-             //adding everything to the data base
-    
-            addDoc(colRef,{
-            title:blogForm.title.value,
-            blogImg: imageLink,
-            description:blogForm.desc.value,
-            content:document.querySelector(".ql-editor").innerHTML
-        }).then(()=>{
-            blogForm.reset()
-            console.log("document added")
-        })
+                 //adding everything to the data base
+        
+                addDoc(colRef,{
+                title:blogForm.title.value,
+                blogImg: imageLink,
+                description:blogForm.desc.value,
+                content:document.querySelector(".ql-editor").innerHTML
+            }).then(()=>{
+                blogForm.reset()
+                location.reload()
+                console.log("document added")
             })
-        }).catch((err)=>{
-            console.log(err)
-    
-        })
-    
+                })
+            }).catch((err)=>{
+                console.log(err)
+        
+            })
+            }
+            
            }
+           
     } 
+
+
+
+
+
     
 //homepage showing
 const blog_all=document.querySelector(".blog_all")
@@ -85,10 +97,11 @@ if(blog_all!=null){
     
     fetchData.then((data)=>{
         localStorage.setItem("fetched data",JSON.stringify(data))
+        var blogsData=data
+        document.querySelector(".landing_page")!=null?blogsData=data.splice(0,4):console.log(null)
 
-        blog_all.innerHTML=data.map(({blogImg,title,id})=>{
-      
 
+        blog_all.innerHTML=blogsData.map(({blogImg,title,id})=>{
         return(`
         <div class="blog_cont">
                 <img src=${blogImg} alt="" class="blog_img">
@@ -96,8 +109,10 @@ if(blog_all!=null){
                 <a href="./blog.html?id=${id}" class="read_blog">READ BLOG</a>
                 </div>
         `)
-
+        
        })
+    
+       document.querySelector(".animation").style.display="none"
     })    
 }
 
@@ -105,11 +120,9 @@ if(blog_all!=null){
 const single_blog=document.querySelector(".blog_left")
 if(single_blog!=null){
     const blogId=location.search.split("=")[1]
-   
-
-      
         //_______________ showing a singe blog____________________//
         fetchData.then((data)=>{
+            console.log(data)
             data.filter((element,index)=>{
                 if (element.id==blogId){
                  
@@ -153,11 +166,7 @@ if(single_blog!=null){
                 `)
             })
         })   
-
-
-
-
-
+        // when they click on different blog
     window.addEventListener('hashchange', function() {
         this.location.reload()
     
@@ -192,7 +201,7 @@ if(blog_manage!=null){
     
     fetchData.then((data)=>{
         blog_manage.innerHTML=data.map(({blogImg,title})=>{
-        console.log(title)
+      
         return(`
             <div class="blog_cont">
                 <img src=${blogImg} alt="" class="blog_img">
@@ -203,6 +212,8 @@ if(blog_manage!=null){
                 </div>
             </div>
         `)
+     
        })
+       document.querySelector(".animation").style.display="none"
     })    
 }
