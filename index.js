@@ -42,14 +42,9 @@ menu_btn.onclick=()=>{
             menu_btn.classList="fas fa-bars"
             if(scrollY>590){
                 menu_btn.style.color="#000d53"
-            }
-            
+            }   
         }
-
     }
-    
-  
-   
 }
 //disappearing navigation menu
 links.forEach((item)=>{
@@ -64,32 +59,7 @@ links.forEach((item)=>{
        
     }
 })
-//contact page validation
-// login validation
-const contact_btn=document.querySelector('.contact_btn')
-contact_btn.onclick=(e)=>{
-    e.preventDefault()
-    validateContact()
-}
 
 
-function validateContact(){
-    const contactForm=document.getElementById("contact_page")
-    if(contactForm.checkValidity()==true){
-        alert("successfully validated")           
-    }
-    else{
-        if(contactForm[0].checkValidity()==false){
-            contactForm.reportValidity()
-            contactForm[0].focus()
-        }
-        else if(contactForm[1].checkValidity()==false){
-            contactForm.reportValidity()
-            contactForm[1].focus()
-        }
-        else if(contactForm[2].checkValidity()==false){
-            contactForm.reportValidity()
-            contactForm[2].focus()
-        }
-    }
-}
+
+

@@ -81,7 +81,7 @@ height: 30vw;
     top: 80vh;
     padding: .5%;
     border-radius: 50%;
-    background-color: #ae9200;
+    background-color: #b59a10;
     }
 .place{
     background-color: aqua;
@@ -102,7 +102,7 @@ height: 30vw;
     height: 100vh;
     min-width: 13em;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.556);
-    background-color: #ae9200;
+    background-color: #b59a10;
 }
 .logo{
     z-index: 10;
@@ -172,7 +172,7 @@ height: 30vw;
     border-radius: 50%;
 }
 .admin{
-    color: #ae9200;
+    color: #b59a10;
     font-size: larger;
     margin: 0% 3%;
 }
@@ -189,7 +189,7 @@ height: 30vw;
     min-width: 30%;
     box-sizing: border-box;
     margin: 2% 0%;
-    background-color: #ae9200;
+    background-color: #b59a10;
     border-radius: 2vh;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.456);
 }
@@ -230,7 +230,7 @@ height: 30vw;
 }
 .sender_name{
     font-size: x-large;
-    color: #ae9200;
+    color: #b59a10;
 }
 .sender_email{
     font-weight: 600;
@@ -292,6 +292,75 @@ height: 30vw;
     background-color: rgb(139, 0, 0);
 }
 /* manage blogs */
+/* delete prompt */
+.are_you_sure{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    backdrop-filter: blur(5px);
+    z-index: 30;
+}
+.are_you_sure_box{
+    padding: 1% ;
+    width: 40vw;
+    min-width: 20em;
+    min-height: 35vh;
+    background-color: white;
+    margin: 30vh auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #000000;
+}
+.del_for{
+    padding:  2% 2% 1%;
+    font-size: xx-large;
+    font-weight: 100;
+    color: rgb(42, 42, 42);
+
+}
+.del_for_eternity{
+    padding:  0% 2% 2%;  
+    margin: 5% 0% 0%;
+    line-height: 5vh; 
+    font-size: large;
+    color: rgb(42, 42, 42);
+
+}
+.delete_action_box{
+    display: flex;
+    margin: 2%;
+    justify-content: right;
+}
+.delete_action_btn,.cancel_action_btn{
+    font-size: large;
+    padding: 2% 5%;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin: 0% 3%;
+    background-color: rgb(189, 61, 61);
+
+}
+.delete_action_btn:hover{
+    background-color: rgb(229, 32, 32);
+
+}
+
+.cancel_action_btn{
+    background-color: rgb(172, 172, 172);
+    color: #000000;
+    margin: 0%;
+}
+.cancel_action_btn:hover{
+    background-color: rgb(104, 104, 104);
+}
+
+
+/* delete prompt */
+
+
+
+
 .blogs{
    
     width: 100%;
@@ -433,14 +502,15 @@ height: 30vw;
 
     }
     #dash_menu{
-display: none;
+        display: none;
     }
-    .logo{display: none;
+    .logo{
+        display: none;
     }
     .menu_item{
         display: flex;
-padding: 1vh 2%;
-flex-direction: column;
+        padding: 1vh 2%;
+        flex-direction: column;
     }
     .dashboard_link{
         display: inline;
