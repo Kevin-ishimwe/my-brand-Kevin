@@ -253,7 +253,9 @@ if(contactPage!=null){
          email:contactPage[1].value,
          content:contactPage[2].value
          }).then(()=>{
-      document.querySelector(".contact_btn").innerHTML="SEND"
+      document.querySelector(".contact_btn").innerHTML="SENT"
+      document.querySelector(".contact_btn").style.background="green"
+    
              contactPage.reset()
 
          }).catch((err)=>{

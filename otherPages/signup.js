@@ -9,7 +9,6 @@ function validateSignUp(){
 
     if(signUpForm.checkValidity()==true){
         if(signUpForm[1].value==signUpForm[2].value){
-            alert("successfully validated")
         window.location.href="./login.html"    
         }
         else{

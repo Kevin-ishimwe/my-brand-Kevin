@@ -10,7 +10,6 @@ login_btn.onclick=(e)=>{
 function validateLogin(){
     const loginForm=document.forms.login
     if(loginForm.checkValidity()==true){
-        alert("successfully validated")
         window.location.href="./dashboard.html"       
     }
     else{
