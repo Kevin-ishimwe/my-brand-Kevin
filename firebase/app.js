@@ -90,7 +90,6 @@ const firebaseConfig = {
 const blog_all=document.querySelector(".blog_all")
 if(blog_all!=null){ 
     fetchData.then((data)=>{
-        localStorage.setItem("fetched data",JSON.stringify(data))
         var blogsData=data
         document.querySelector(".landing_page")!=null?blogsData=data.splice(0,4):console.log(null)
         blog_all.innerHTML=blogsData.map(({blogImg,title,id})=>{
