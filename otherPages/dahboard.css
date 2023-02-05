@@ -37,38 +37,7 @@ height: 30vw;
    
     
 }
-.box::before{
-    content: '';
-    position:absolute;
-    top: -10px;
-    left: -10px;
-    height: 100%;
-    width: 100%;
-    border: 10px solid transparent;
-    border-top: 10px solid #ff006a;
-    border-right: 10px solid #00ffae;
-    border-radius: 50%;
-    animation: rotinside 1s infinite;
 
-}
-
-
-    
-@keyframes rotinside{
-    0%{
-        transform: rotate(0deg);
-      }
- 100%{
-        border-bottom: 10px solid #00ff08;
-        border-left: 10px solid #fff700;
-        transform: rotate(360deg);
-      }
-      50%{
-        border-top: 10px solid #ff0000;
-        border-right: 10px solid #000000;
-        transform: rotate(360deg);
-      }
-}
 
 
 /* loading animation */
