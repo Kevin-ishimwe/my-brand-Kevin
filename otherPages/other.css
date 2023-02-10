@@ -131,7 +131,7 @@
 .blog_box {
   display: flex;
   width: 90vw;
-  margin: 0% auto;
+  margin: 3% auto;
   justify-content: space-evenly;
   border-bottom: 10px solid black;
 }
@@ -276,8 +276,8 @@
   border: solid azure;
 }
 .footer_content {
-  width: 90vw;
-  margin: 2% auto;
+  width: 95vw;
+  margin: 3vh auto 0%;
   display: flex;
   justify-content: space-between;
 }
