@@ -25,7 +25,7 @@
     />
   </head>
   <body>
-    <div style="display: none" class="animation">
+    <div class="animation">
       <h1 class="box">LOADING...</h1>
     </div>
     <div class="dash_left">
@@ -60,7 +60,7 @@
     <div class="dash_right">
       <div class="welcome_box">
         <div>
-          <h1 class="welcome">ADD NEW BLOG</h1>
+          <h1 class="welcome">UPDATE BLOG</h1>
           <p class="admin">Admin</p>
         </div>
         <img
@@ -69,7 +69,7 @@
           alt=""
         />
       </div>
-      <form action="" class="new_blog">
+      <form action="" class="new_blog" name="update_blog">
         <input
           type="text"
           class="new_blog_title"
@@ -89,17 +89,23 @@
           minlength="60"
           required
         ></textarea>
+        <img src="" alt="" id="blogImg" height="300px" width="500px" />
         <input type="file" class="new_blog_img" required />
-        <img src="" alt="" id="img_preview" width="300px" />
+        <img src="" alt="" id="img_preview" />
         <div id="editor"></div>
         <div class="new_blog_btns">
-          <button class="cancel">CANCEL</button>
+          <a
+            class="cancel"
+            href="./manageBlogs.html"
+            style="text-decoration: none"
+            >CANCEL</a
+          >
           <button
             type="submit"
             class="add_blog"
             style="background-color: #001b87"
           >
-            ADD BLOG
+            UPDATE BLOG
           </button>
         </div>
       </form>
@@ -115,12 +121,12 @@
         oFReader.onload = function (oFREvent) {
           document.getElementById("img_preview").src = oFREvent.target.result;
           document.getElementById("img_preview").style =
-            "width:30vw;margin:1% 2% 3%";
+            "width:5vw;margin:1% 2% 3%";
         };
       };
     </script>
 
-    <script src="dash.js"></script>
+    <script src="update.js"></script>
     <!-- quill js -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script>

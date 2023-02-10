@@ -61,13 +61,15 @@ const getBlogs = async () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      blog_all.innerHTML = data.map(({ blogImg, blogTitle, _id }) => {
-        return `<div class="blog_cont">
+      blog_all.innerHTML = data
+        .map(({ blogImg, blogTitle, _id }) => {
+          return `<div class="blog_cont">
                 <img src=${blogImg} alt="" class="blog_img">
                 <p class="blog_desc">${blogTitle}</p>
                 <a href="./otherPages/blog.html?id=${_id}" class="read_blog">READ BLOG</a>
                 </div>`;
-      });
+        })
+        .join("");
     });
 };
 getBlogs();
@@ -90,6 +92,7 @@ contact_form.onsubmit = async (e) => {
     .then((res) => res.json())
     .then((data) => {
       contact_form[3].textContent = "SEND";
+      contact_form.reset();
       console.log(data);
     });
 };

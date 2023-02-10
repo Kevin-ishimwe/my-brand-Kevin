@@ -55,20 +55,48 @@ if (messageQueries != null) {
       if (data.status === "failed") {
         window.location.href = "./login.html";
       } else {
-        messageQueries.innerHTML = data.map(({ content, name, email }) => {
+        messageQueries.innerHTML = data.map(({ content, name, email, _id }) => {
+          document.querySelector(".animation").style.display = "none";
           return `
               <div class="message_box">
                   <i class="fa-solid fa-message" id="message_icon"></i>
-                  <div class="message_info">
-                      <h3 class="sender_name">${name}</h3>
-                      <p class="sender_email">${email}</p>
-                      <p class="message_content">${content}</p>
+                  <div class="message_info" style="width:100%">
+                  <h3 class="sender_name">${name}</h3>
+                  <p class="sender_email">${email}</p>
+                  <p class="message_content">${content}</p>
                   </div>
-                  
-              </div>
+                  <div style="width:fit-content">
+                  <i class="fa-sharp fa-solid fa-trash" style="color: red; font-size: x-large;  " id="delMe" title=${_id} "></i>
+                  </div>
+                  </div>
               `;
-        });
+        }).join("")
       }
+      document.querySelectorAll("#delMe").forEach((item) => {
+        item.onclick = async () => {
+          document.querySelector(".animation").style.display = "grid";
+          console.log(item.title);
+          await fetch(
+            `https://fair-teal-chinchilla-tam.cyclic.app/deletemessage/${item.title}`,
+            {
+              method: "DELETE",
+              headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+                token: `Bearer ${localStorage.token}`,
+              },
+              mode: "cors",
+            }
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data);
+              document.querySelector(".animation").style.display = "none";
+              location.reload();
+            });
+        };
+      });
+
       console.log(data);
     });
 }
@@ -122,11 +150,13 @@ if (blog_manage != null) {
                 <img src=${blogImg} alt="" class="blog_img">
                 <p class="blog_desc">${blogTitle}</p>
                 <div class="manage_icons">
+                <a href="./update_blog.html?id=${_id}">
                 <i class="fas fa-edit" style="color: #46487b;font-size: larger;" id=${_id}></i>
+                </a>
                 <i class="fa-sharp fa-solid fa-trash" style="color: red; font-size: x-large;" id="delMe" title=${_id} "></i>
                 </div>
             </div>`;
-      });
+      }).join("")
       console.log(document.querySelectorAll("#delMe"));
       document.querySelectorAll("#delMe").forEach((item) => {
         item.onclick = (e) => {

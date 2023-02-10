@@ -36,14 +36,17 @@ const getBlogs = async () => {
   })
     .then((res) => res.json())
     .then((data) => {
-      blog_all.innerHTML = data.map(({ blogImg, blogTitle, _id }) => {
-        document.querySelector(".animation").style.display = "none";
-        return `<div class="blog_cont">
+      blog_all.innerHTML = data
+        .map(({ blogImg, blogTitle, _id }) => {
+          document.querySelector(".animation").style.display = "none";
+          return `<div class="blog_cont">
                 <img src=${blogImg} alt="" class="blog_img">
                 <p class="blog_desc">${blogTitle}</p>
+                
                 <a href="./blog.html?id=${_id}" class="read_blog">READ BLOG</a>
                 </div>`;
-      });
+        })
+        .join("");
     });
 };
 if (document.querySelector(".blog_all") != null) {
@@ -71,6 +74,7 @@ if (single_blog != null) {
                     <img src="${data[index].blogImg}" class="blog_img_single">
                     <h2 style="overflow:none;padding: 2% 0%;
                     font-size: x-large;
+                    font-style:italic;
                     font-weight: 500;
                     color: #00034a;" >${data[index].blogDescription}</h2>
                 <div id="blogCONT">${data[index].blogContent}</div> `);
@@ -130,8 +134,8 @@ if (single_blog != null) {
         }
       );
       const more = data.splice(0, 4);
-      document.querySelector(".more_blogs").innerHTML = more.map(
-        ({ blogImg, blogTitle, blogDescription, _id }) => {
+      document.querySelector(".more_blogs").innerHTML = more
+        .map(({ blogImg, blogTitle, blogDescription, _id }) => {
           return `
                 <div class="blog_visit">
                 <img src="${blogImg}" class="more_blogs_img" alt="">
@@ -149,12 +153,14 @@ if (single_blog != null) {
                 -webkit-line-clamp:3;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
+                text-decoration: none;
+                color:#2b3675
                 ">${blogDescription}</a>
                 </div>
                 </div>
                 `;
-        }
-      );
+        })
+        .join("");
     });
 }
 const commentform = document.forms.comment;

@@ -32,7 +32,7 @@ login_btn.onclick = async (e) => {
             console.log(data);
             localStorage.setItem("token", data.token);
             window.location.href = "./dashboard.html";
-          }, [2500]);
+          }, [1500]);
         }
 
         setTimeout(() => {
