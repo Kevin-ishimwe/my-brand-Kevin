@@ -4,6 +4,7 @@
   margin: 0%;
   font-family: sans-serif;
 }
+
 .animation {
   width: 100vw;
   height: 100vh;
@@ -14,9 +15,11 @@
   top: 0%;
 }
 .box {
+  min-width: 13em;
+  min-height: 13em;
   display: grid;
   text-align: center;
-  padding-top: 13%;
+  padding-top: 6em;
   box-sizing: border-box;
   width: 30vw;
   height: 30vw;
@@ -33,13 +36,13 @@
 .box::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 90%;
-  width: 90%;
-  border: 10px solid transparent;
-  border-top: 10px solid #ff006a;
-  border-right: 10px solid #00ffae;
+  top: -0.45em;
+  left: -12px;
+  height: 100%;
+  width: 100%;
+
+  border-top: 15px solid #ff006a;
+  border-right: 15px solid #00ffae;
   border-radius: 50%;
   animation: rotinside 1s infinite;
 }
@@ -49,22 +52,22 @@
     transform: rotate(0deg);
   }
   100% {
-    border-bottom: 10px solid #00ff08;
-    border-left: 10px solid #fff700;
+    border-bottom: 15px solid #00ff08;
+    border-left: 15px solid #fff700;
     transform: rotate(360deg);
   }
   50% {
-    border-top: 10px solid #ff0000;
-    border-right: 10px solid #000000;
+    border-top: 15px solid #ff0000;
+    border-right: 15px solid #00ff37;
     transform: rotate(360deg);
   }
 }
 
 .contact_name {
-  padding: 2% 2%;
-  font-size: large;
+  padding: 1% 2%;
+
   max-width: 50vw;
-  margin: 1% 1% 2%;
+  margin: 1% 0%;
 }
 
 .navigation {
@@ -77,11 +80,11 @@
 .logo {
   z-index: 10;
   display: inline-flex;
-  font-size: 50px;
+  font-size: 40px;
   font-family: "Romanesco", sans-serif;
   font-weight: 500;
   color: azure;
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: 50%;
   border: solid azure;
   background-color: #000d53;
@@ -115,7 +118,7 @@
   padding: 0.5% 2em;
   box-sizing: border-box;
   font-size: medium;
-  width: 20em;
+  width: 15em;
   background-color: #d9d9d9b2;
   border: none;
   border-radius: 10vh;
@@ -133,7 +136,7 @@
   width: 90vw;
   margin: 3% auto;
   justify-content: space-evenly;
-  border-bottom: 10px solid black;
+  border-bottom: 5px solid rgb(24, 24, 24);
 }
 
 .blog_left {
@@ -193,7 +196,6 @@
 }
 .blog_more_title {
   font-size: larger;
-
   overflow: hidden;
 }
 #blogCONT p {
@@ -210,20 +212,17 @@
   padding: 1% 2%;
 }
 .comment_section {
-  width: 45vw;
+  width: 50vw;
   margin: 2% 5%;
+  display: grid;
 }
 .comment {
-  min-width: 40vw;
-  padding: 2%;
-  text-anchor: none;
   resize: none;
-  font-size: larger;
-  border-radius: 2vh;
+  font-size: large;
 }
 .post_comment {
-  min-width: 10vw;
   border: none;
+  cursor: pointer;
   padding: 1%;
   margin: 2% 0%;
   font-size: x-large;
@@ -232,22 +231,21 @@
 }
 .other_comments {
   margin: 2% 5%;
-
-  width: 40vw;
+  width: 50vw;
 }
 .Actual_comment {
-  font-size: medium;
-  color: gray;
+  font-size: large;
+  color: rgb(99, 98, 98);
   margin-bottom: 2%;
 }
 .name {
-  color: #000d53;
-  margin: 1% 0%;
+  color: #00179c;
+  margin: 6% 0% 0%;
 }
 .comment_box {
   display: flex;
-  padding: 1% 2%;
-  border-bottom: 2px solid rgba(128, 128, 128, 0.461);
+  padding: 1% 0%;
+  border-bottom: 2px solid rgba(102, 96, 116, 0.461);
   margin: 2% 0%;
 }
 .footer {
@@ -257,12 +255,12 @@
   background-color: #00034a;
 }
 #user {
-  font-size: xx-large;
+  font-size: 3em;
   margin: 2%;
   background-color: gray;
   color: white;
   height: fit-content;
-  padding: 1% 1% 1%;
+  padding: 1%;
 }
 .logo_footer {
   font-size: 40px;
@@ -323,6 +321,12 @@
 }
 
 @media screen and (max-width: 780px) {
+  .box {
+    padding-top: 4.5em;
+    left: 15%;
+    min-width: 10em;
+    min-height: 10em;
+  }
   .blog_box {
     flex-direction: column;
     justify-content: center;
@@ -397,6 +401,12 @@
 }
 
 @media screen and (max-width: 600px) {
+  .box {
+    padding-top: 4.5em;
+    left: 8%;
+    min-width: 10em;
+    min-height: 10em;
+  }
   .nav_ul {
     padding: 13vh 0%;
     display: flex;
@@ -414,7 +424,7 @@
   #bars {
     z-index: 10;
     display: inline-flex;
-    font-size: 3em;
+    font-size: 2em;
     margin: 3% 2%;
     color: #000d53;
   }
@@ -432,10 +442,15 @@
     padding: 2%;
     margin: 4% 0%;
   }
+  .more_blogs_img {
+    width: 8em;
+  }
   .blog_box {
-    width: 100vw;
-    display: grid;
-    justify-content: center;
+    width: 95%;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0% auto;
+    display: block;
   }
   .blog_left {
     width: 90vw;
@@ -447,7 +462,9 @@
     font-size: larger;
   }
   .blog_right {
-    width: 90vw;
+    width: 100%;
+
+    margin: 0%;
     box-sizing: border-box;
   }
   .comment {

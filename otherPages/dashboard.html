@@ -1,73 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="shortcut icon" href="assets\IMG_20210310_140957.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="dahboard.css">
-</head>
-<body>
-      <div class="animation">
-        <h1 class="box">LOADING...</h1>
-         </div>
+    <link rel="shortcut icon" href="assets\IMG_20210310_140957.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="dahboard.css" />
+  </head>
+  <body>
+    <div class="animation">
+      <h1 class="box">LOADING...</h1>
+    </div>
     <div class="dash_left">
-        <h1 class="logo">IK</h1>
-        <div class="dash_menu">
-            <a class="menu_item" href="../index.html" >
-                <i class="fa-solid fa-house" id="menu_icon"></i>
-                <h2 class="dashboard_link" >HOME</h2>
-            </a>
-            <a class="menu_item" href="./dashboard.html" style="background-color: rgba(245, 222, 179, 0.235);
-            border-right: 10px solid white;">
-                <i class="fa-solid fa-gauge" id="menu_icon"></i>
-                <h2 class="dashboard_link" >DASHBOARD</h2>
-            </a>
-            <a class="menu_item" href="./add_blog.html">
-                <i class="fa-solid fa-pen-nib" id="menu_icon"></i>
-                <h2 class="dashboard_link">ADD BLOG</h2>
-            </a>
-            <a class="menu_item" href="./manageBlogs.html">
-                <i class="fa-solid fa-list-check" id="menu_icon"></i>
-                <h2 class="dashboard_link">MANAGE BLOGS</h2>
-            </a>
-        </div>
-        <i class="fa-solid fa-angles-left" id="dash_menu"></i>
+      <h1 class="logo">IK</h1>
+      <div class="dash_menu">
+        <a class="menu_item" href="../index.html">
+          <i class="fa-solid fa-house" id="menu_icon"></i>
+          <h2 class="dashboard_link">HOME</h2>
+        </a>
+        <a
+          class="menu_item"
+          href="./dashboard.html"
+          style="
+            background-color: rgba(245, 222, 179, 0.235);
+            border-right: 10px solid white;
+          "
+        >
+          <i class="fa-solid fa-gauge" id="menu_icon"></i>
+          <h2 class="dashboard_link">DASHBOARD</h2>
+        </a>
+        <a class="menu_item" href="./add_blog.html">
+          <i class="fa-solid fa-pen-nib" id="menu_icon"></i>
+          <h2 class="dashboard_link">ADD BLOG</h2>
+        </a>
+        <a class="menu_item" href="./manageBlogs.html">
+          <i class="fa-solid fa-list-check" id="menu_icon"></i>
+          <h2 class="dashboard_link">MANAGE BLOGS</h2>
+        </a>
+        <button
+          class="menu_item"
+          onclick="handleLogout()"
+          href="./manageBlogs.html"
+          style="
+            width: 99%;
+            justify-content: center;
+            padding: 10%;
+            margin: 10% 0%;
+            background-color: #867108;
+            border: none;
+          "
+        >
+
+          <h2 class="dashboard_link">LOGOUT</h2>
+        </button>
+      </div>
+      <i class="fa-solid fa-angles-left" id="dash_menu"></i>
     </div>
 
     <div class="dash_right">
-        <div class="welcome_box">
-            <div><h1 class="welcome">WELCOME BACK</h1>
-                <p class="admin">Admin</p>
-            </div>
-            <img class="welcome_img" src="../assets/IMG_20210310_140957.jpg" alt="">
+      <div class="welcome_box">
+        <div>
+          <h1 class="welcome">WELCOME BACK</h1>
+          <p class="admin">Admin</p>
         </div>
-        <div class="upper_dash">
-            <div class="upper_left">
-                <h2 class="users">new visitors</h2>
-                <p class="num_users">10</p>
-            </div>
-            <div class="upper_right">
-                <h2 class="new_blogs" style="color: white;">new blogs</h2>
-                <p class="num_blogs" style="color: white;">5</p>
-            </div>
-            <div class="upper_left">
-                <h2 class="users">subscribers</h2>
-                <p class="num_users">30</p>
-            </div>
+        <img
+          class="welcome_img"
+          src="../assets/IMG_20210310_140957.jpg"
+          alt=""
+        />
+      </div>
+      <!-- <div class="upper_dash">
+        <div class="upper_left">
+          <h2 class="users">new visitors</h2>
+          <p class="num_users">10</p>
         </div>
-        <div class="messages">
-            <h2  class="messages_hd">MESSAGES</h2>
-            
-           
+        <div class="upper_right">
+          <h2 class="new_blogs" style="color: white">new blogs</h2>
+          <p class="num_blogs" style="color: white">5</p>
         </div>
+        <div class="upper_left">
+          <h2 class="users">subscribers</h2>
+          <p class="num_users">30</p>
+        </div>
+      </div> -->
+      <div class="messages">
+        <h2 class="messages_hd">MESSAGES</h2>
+      </div>
     </div>
-    
-    
+    <script>
+      const handleLogout = () => {
+        console.log("logout");
+        localStorage.clear();
+        window.location.href = "/";
+      };
+    </script>
+
     <script src="dash.js"></script>
- 
-</body>
+  </body>
 </html>
